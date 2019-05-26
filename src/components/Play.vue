@@ -5,6 +5,7 @@
 <script>
 
     export default {
+
     }
 </script>
 
@@ -12,7 +13,7 @@
 .play {
     width: 100%;
     background-color: green;
-    height: 100px;
+    height: 100%;
     display: flex;
 }
 </style>

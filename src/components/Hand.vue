@@ -17,21 +17,3 @@
         },
     }
 </script>
-
-<style scoped lang="scss">
-    .hand {
-        display: flex;
-        position: fixed;
-        bottom: -80px;
-        justify-content: center;
-        width: 100%;
-
-        &__card {
-            transition: all 0.2s ease-in-out;
-
-            &:hover {
-                transform: scale(2) translateY(-80px);
-            }
-        }
-    }
-</style>

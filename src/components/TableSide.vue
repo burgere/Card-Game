@@ -1,7 +1,7 @@
 <template>
     <div class="player-area">
-        <Play></Play>
-        <Hand></Hand>
+        <Play class="player-area__play"></Play>
+        <Hand class="player-area__hand"></Hand>
     </div>
 </template>
 
@@ -18,7 +18,16 @@
     .player-area {
         background-color: blue;
         width: 100%;
-        height: 200px;
+        height: 100%;
         display: flex;
+        position: relative;
+
+        &__hand {
+            display: flex;
+            position: absolute;
+            bottom: -80px;
+            justify-content: center;
+            width: 100%;
+        }
     }
 </style>
