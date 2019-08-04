@@ -10,7 +10,7 @@
     import Play from '../components/Play'
 
     export default {
-        components: { Hand, Play, }
+        components: { Hand, Play }
     }
 </script>
 

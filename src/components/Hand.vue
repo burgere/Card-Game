@@ -1,19 +1,60 @@
 <template>
-    <draggable class="hand">
-        <Card id="one" class="hand__card"></Card>
-        <Card id="two" class="hand__card"></Card>
-        <Card id="three" class="hand__card"></Card>
-    </draggable>
+    <div class="hand"
+         draggable="true"
+         v-on:dragstart="onCardDragged($event)"
+    >
+       <Card
+                v-for="(card, index) in cards"
+                :key="index"
+                :id="index"
+                :card="card"
+                class="hand__card"
+                draggable="true"
+        >
+        </Card>
+    </div>
 </template>
 
 <script>
     import Card from '../components/Card'
-    import Draggable from 'vuedraggable'
 
     export default {
         components: {
             Card,
-            Draggable
         },
+        data() {
+            return {
+                cards: [
+                    {
+                        title: 'Test'
+                    },
+                    {
+                        title: 'Test Two'
+                    },
+                    {
+                        title: 'Test Three'
+                    },
+                    {
+                        title: 'Test Four'
+                    },
+                    {
+                        title: 'Test Five'
+                    },
+                    {
+                        title: 'Test Six'
+                    },
+                    {
+                        title: 'Test Seven'
+                    }
+                ]
+            }
+        },
+        methods: {
+            onCardDragged(event) {
+                let card = this.cards[event.target.id]
+                event.dataTransfer.dropEffect = 'copy'
+                event.dataTransfer.setData('card', JSON.stringify(card))
+            }
+        }
     }
 </script>

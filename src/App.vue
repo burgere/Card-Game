@@ -37,7 +37,8 @@
             .top-board {
                 .player-area {
                     &__hand {
-                        top: -15px;
+                        top: -150px;
+                        pointer-events: none;
 
                         .hand {
                             &__card {

@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card__header">
-                <div class="header__name">Borogos Orgon</div>
+                <div class="header__name" v-html="card.title"></div>
                 <div class="header__cost">2</div>
             </div>
             <div class="card__image"></div>
@@ -27,7 +27,8 @@
 
 <script>
     export default {
-        name: "Card"
+        name: "Card",
+        props: [ 'card' ]
     }
 </script>
 
@@ -35,8 +36,8 @@
     @import url("https://fonts.googleapis.com/css?family=Crimson+Text");
 
     .card {
-        border: solid 7px black;
-        border-radius: 7px;
+        border: solid 5px black;
+        border-radius: 5px;
         height: 160px;
         width: 100px;
         cursor: pointer;
@@ -73,7 +74,7 @@
         }
 
         &__body {
-
+            border: inset 1px;
         }
     }
 </style>
