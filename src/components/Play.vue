@@ -56,5 +56,7 @@
         background-color: green;
         height: 60%;
         display: flex;
+        justify-content: center;
+        transition: border 0.5s;
     }
 </style>
