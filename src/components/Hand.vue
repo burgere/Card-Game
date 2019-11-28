@@ -24,33 +24,6 @@
         components: {
             Card,
         },
-        data() {
-            return {
-                cards: [
-                    {
-                        title: 'Test'
-                    },
-                    {
-                        title: 'Test Two'
-                    },
-                    {
-                        title: 'Test Three'
-                    },
-                    {
-                        title: 'Test Four'
-                    },
-                    {
-                        title: 'Test Five'
-                    },
-                    {
-                        title: 'Test Six'
-                    },
-                    {
-                        title: 'Test Seven'
-                    }
-                ],
-            }
-        },
         methods: {
             onCardDragged(event) {
                 let card = this.cards[event.target.id]
