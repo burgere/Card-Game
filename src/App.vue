@@ -1,17 +1,26 @@
 <template>
     <div id="app">
-        <TableSide class="top-board"/>
-        <TableSide class="bottom-board"/>
+        <TableSide class="top-board" :player="players[playerKeys[0]]" />
+        <TableSide class="bottom-board" :player="players[playerKeys[1]]"/>
     </div>
 </template>
 
 <script>
-    import TableSide from "./components/TableSide";
+    import TableSide from "./components/TableSide"
+    import { mapState } from "vuex"
 
     export default {
         name: 'app',
         components: {
             TableSide
+        },
+        computed: {
+            ...mapState({
+                players: state => state.players
+            }),
+            playerKeys() {
+                return Object.keys(this.players).map(key => key)
+            }
         }
     }
 </script>
